@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Length Converter</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		body{
+			font-family: 'Titan One', cursive;
+			background-color: lightgoldenrodyellow;
+		}
+		.container{
+			border: dotted;
+			border-color: rebeccapurple;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<br><br>
+	<div class="container" style="background-color: mediumpurple;">
+		<br>
+<h1>Convert Millimeters to Other Units!</h1>
+<h6>Note: Press "Enter" after inputting your value then click the unit you want to convert it to.</h6>
+<hr>
+	<h2>Millimeters</h2>
+	<div class="row">
+		<div class="col-md-4"></div>
+	<div class="col-md-4"><input type="number" id="milli" onkeydown="redirect(this)" class="form-control"></div>
+	<div class="col-md-4"></div>
+	</div>
+	<br>
+	<h6>Convert to...</h6>
+	<button class="btn btn-warning" onclick="mc()">Centimeters</button>
+	<button class="btn btn-primary" onclick="mm()">Meters</button>
+	<button class="btn btn-success" onclick="mk()">Kilometers</button>
+	<br><br>
+</div>
+</center>
+</body>
+<script type="text/javascript">
+	function mc() {
+		let a = parseInt(document.getElementById('milli').value);
+		alert(a / 10);
+	}
+	function mm() {
+		let a = parseInt(document.getElementById('milli').value);
+		alert(a / 1000);
+	}
+	function mk() {
+		let a = parseInt(document.getElementById('milli').value);
+		alert(a / 1000000);
+	}
+	 function redirect(ele) {
+            if(event.key === 'Enter') {
+                if(ele.value === '143')
+                     window.location.href = 'Error1.html';
+            }
+        }
+</script>
+</html>
